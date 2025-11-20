@@ -12,7 +12,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.example.mvvm.R
 
 @OptIn(markerClass = ExperimentalMaterial3Api::class)
@@ -45,3 +47,8 @@ fun TampilSiswa(
             modifier = Modifier.padding(paddingValues = isiRuang),
             verticalArrangement = Arrangement.SpaceBetween
         ) {
+            Column(
+                modifier = Modifier.padding(all = dimensionResource(16.dp)),
+                verticalArrangement = Arrangement.spacedBy(space = dimensionResource(16.dp))
+            ) {
+        }
