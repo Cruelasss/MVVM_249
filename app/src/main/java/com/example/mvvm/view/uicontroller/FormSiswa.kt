@@ -1,17 +1,20 @@
 package com.example.mvvm.view.uicontroller
 
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 
 
 @OptIn(markerClass = ExperimentalMaterial3Api::class)
 @Composable
 fun FormSiswa(
 
- pilihanJK: List<String>,
+pilihanJK: List<String>,
 onSubmitButtonClicked: (MutableList<String>) -> Unit,
 modifier: Modifier = Modifier
 ) {
@@ -19,3 +22,11 @@ modifier: Modifier = Modifier
     var txtAlamat by remember { mutableStateOf(value = "") }
     var txtGender by remember { mutableStateOf(value = "") }
     val listData: MutableList<String> = mutableListOf(txtNama, txtGender, txtAlamat)
+
+    val array = Color(0xFF7B8287)
+    val lali = Color(0xFF7687A8)
+    val lili = Color(0xFF89C7A0)
+
+
+
+
