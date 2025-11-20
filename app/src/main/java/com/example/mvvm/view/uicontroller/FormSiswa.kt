@@ -1,20 +1,26 @@
 package com.example.mvvm.view.uicontroller
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.unit.dp
 
 
 @OptIn(markerClass = ExperimentalMaterial3Api::class)
@@ -57,5 +63,12 @@ modifier: Modifier = Modifier
                 onValueChange = {
                     txtNama = it
                 }
+            )
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = 12.dp)
+                    .width(width = 250.dp),
+                thickness = dimensionResource(1.dp),
+                color = lili
             )
 
