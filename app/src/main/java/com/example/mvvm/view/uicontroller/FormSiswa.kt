@@ -1,6 +1,7 @@
 package com.example.mvvm.view.uicontroller
 
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -28,5 +29,9 @@ modifier: Modifier = Modifier
     val lili = Color(0xFF89C7A0)
 
 
-
+    Scaffold(modifier = Modifier,
+        topBar = { TopAppBar(title = { Text(text = stringResource(id = R.string.app_name), color = lali) },
+            colors = TopAppBarDefaults.mediumTopAppBarColors(array)
+        ) }
+    )
 
